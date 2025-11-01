@@ -73,3 +73,8 @@ public
 # Build artifacts
 portfolio-build.zip
 *.zip
+
+# Personal documents
+*.docx
+*.pdf
+*CV*
