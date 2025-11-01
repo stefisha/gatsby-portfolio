@@ -1,115 +1,101 @@
-<p align="center">
-  <a href="https://cara.lekoarts.de">
-    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Starter Portfolio: Cara
-</h1>
+# Stefan Veličković - Portfolio Website
 
-<p align="center">
-  <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-0BSD-blue.svg" alt="Gatsby Starter Portfolio: Cara is released under the 0BSD license." />
-  </a>
-  <a href="https://github.com/sponsors/LekoArts">
-    <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/LekoArts">
-  </a>
-  <a href="https://www.lekoarts.de?utm_source=cara&utm_medium=Starter">
-    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-  </a>
-</p>
+Personal portfolio website showcasing my work in AI, machine learning, blockchain, and DevOps.
 
-Playful and Colorful One-Page portfolio featuring Parallax effects and animations. Using the Gatsby Theme [`@lekoarts/gatsby-theme-cara`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-cara).
+**Live Site:** [stefisha.me](https://stefisha.me)
 
-[**Demo Website**](https://cara.lekoarts.de)
+## 🚀 About
 
-Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=cara&utm_medium=Starter).
+This is my professional portfolio built with Gatsby, featuring a modern, playful design with parallax effects and animations. The site showcases my projects in AI/ML, blockchain development, and web technologies.
 
 ## ✨ Features
 
-- Theme UI-based theming
-- react-spring Parallax Effect
-- CSS Animations on Shapes
+- Playful and colorful one-page design
+- Parallax scrolling effects
+- Responsive and mobile-friendly
+- Project showcase with live demos
+- Skills and technology highlights
+- Direct contact and scheduling integration
 
-## ⏱️ Quick Start
+## 🛠️ Tech Stack
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+- **Framework:** Gatsby v5
+- **Theme:** @lekoarts/gatsby-theme-cara
+- **Language:** TypeScript
+- **Styling:** Theme UI
+- **Animations:** react-spring
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-portfolio-cara)
+## 📂 Project Structure
+
+```
+gatsby-portfolio/
+├── src/
+│   └── @lekoarts/gatsby-theme-cara/
+│       └── sections/
+│           ├── intro.mdx      # Introduction/Hero section
+│           ├── projects.mdx   # Project showcase
+│           ├── about.mdx      # About me & skills
+│           └── contact.mdx    # Contact information
+├── static/                    # Static assets (favicons, images)
+├── gatsby-config.ts          # Gatsby configuration
+└── package.json
+```
 
 ## 🚀 Getting Started
 
-### 1. **Create a Gatsby site.**
+### Prerequisites
 
-Use the Gatsby CLI to clone the site and install dependencies:
+- Node.js (v18 or higher)
+- npm or yarn
 
-```sh
-npx gatsby new gatsby-starter-portfolio-cara https://github.com/LekoArts/gatsby-starter-portfolio-cara
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/stefisha/gatsby-portfolio.git
+cd gatsby-portfolio
 ```
 
-### 2. **Navigate to your new project.**
-
-```sh
-cd gatsby-starter-portfolio-cara
+2. Install dependencies
+```bash
+npm install
 ```
 
-### 3. **Open the code and start customizing!**
-
-Start the site by running `npm run develop`.
-
-Your site is now running at `http://localhost:8000`!
-
-If you want to learn more about how you can use a Gatsby starter that is configured with a Gatsby theme, you can check out this [shorter](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/using-a-gatsby-theme/) or [longer](https://www.gatsbyjs.com/tutorial/using-a-theme/) tutorial. The tutorials don't exactly apply to this starter however the concepts are the same.
-
-## 📝 Using and modifying this starter
-
-**Important Note:** Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the underlying theme!
-
-This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-cara`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-cara).
-
-Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-cara/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
-
-### Changing content
-
-The content of this project is defined in four `.mdx` files inside the theme's `sections` folder. You can override the files `intro.mdx`, `projects.mdx`, `about.mdx` and `contact.mdx`. This starter has overridden all files for you already.
-
-You have to use the `<ProjectCard />` component inside `projects.mdx` to display the cards. Example:
-
-```md
-## Projects
-
-<ProjectCard title="Freiheit" link="https://www.behance.net/gallery/58937147/Freiheit" bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)">
-This project is my entry to Adobe's #ChallengeYourPerspective contest.
-</ProjectCard>
+3. Start the development server
+```bash
+npm run develop
 ```
 
-### Change your `static` folder
+The site will be running at `http://localhost:8000`
 
-The `static` folder contains the icons, social media images and `robots.txt`. Don't forget to change these files, too! You can use [Real Favicon Generator](https://realfavicongenerator.net/) to generate the image files inside `static`.
+### Available Scripts
 
-## 🤔 Questions or problems?
+- `npm run develop` - Start development server
+- `npm run build` - Build for production
+- `npm run serve` - Serve production build locally
+- `npm run clean` - Clean Gatsby cache
 
-If you have general questions or need help with Gatsby, please go to one of the [support platforms](https://www.gatsbyjs.com/contributing/community/#where-to-get-support) mentioned in Gatsby's documentation. If you have a specific question about this project, you can head to the [GitHub Discussions](https://github.com/LekoArts/gatsby-themes/discussions) of the repository.
+## 📝 Customization
 
-## 🎓 Learning Gatsby
+Content is managed through MDX files in `src/@lekoarts/gatsby-theme-cara/sections/`:
 
-Looking for more guidance? Full documentation for Gatsby lives [on Gatsby's website](https://www.gatsbyjs.com/).
+- **intro.mdx** - Update your name and tagline
+- **projects.mdx** - Add/edit projects using `<ProjectCard>` components
+- **about.mdx** - Describe your background and skills
+- **contact.mdx** - Update contact links and social media
 
-### Themes
+## 🌐 Connect With Me
 
-To learn more about Gatsby themes specifically, I recommend checking out the [theme docs](https://www.gatsbyjs.com/docs/themes/).
+- **GitHub:** [@stefisha](https://github.com/stefisha)
+- **LinkedIn:** [stefan-velickovic](https://www.linkedin.com/in/stefan-velickovic/)
+- **X/Twitter:** [@stefisha](https://x.com/stefisha)
+- **Instagram:** [@svelichko_](https://www.instagram.com/svelichko_)
+- **Schedule a Call:** [calendly.com/stefan-velickovic/30min](https://calendly.com/stefan-velickovic/30min)
 
-### General
+## 📄 License
 
-- **For most developers, I recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+This project is based on the Gatsby Starter Portfolio: Cara by [LekoArts](https://github.com/LekoArts/gatsby-starter-portfolio-cara), released under the 0BSD license.
 
-- **To dive straight into code samples, head [to Gatsby's documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _How-to Guides_ and _Reference_ items in the primary navigation.
+---
 
-## 🌟 Supporting me
-
-Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
-
-Please star this project, share it on Social Media or consider supporting me on [GitHub Sponsors](https://github.com/sponsors/LekoArts)!
+Built with ❤️ by Stefan Veličković (@stefisha)

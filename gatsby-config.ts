@@ -12,10 +12,10 @@ const config: GatsbyConfig = {
     siteTitleAlt: `@stefisha portfolio`,
     siteHeadline: `@stefisha portfolio`,
     siteUrl: `https://stefisha.me`,
-    siteDescription: `Portfolio wwebsite for @stefisha`,
+    siteDescription: `Portfolio website for @stefisha - Software engineer specializing in AI, machine learning, DevOps and Blockchain`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
-    author: `@lekoarts_de`,
+    author: `@stefisha`,
   },
   trailingSlash: `always`,
   plugins: [
