@@ -1,11 +1,10 @@
 {
   "private": true,
-  "name": "cara",
-  "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
-  "version": "0.2.15",
-  "author": "LekoArts",
-  "license": "0BSD",
-  "starter-name": "gatsby-starter-portfolio-cara",
+  "name": "stefisha-portfolio",
+  "description": "Stefan Veličković's portfolio - AI Engineer specializing in machine learning, blockchain, and DevOps",
+  "version": "1.0.0",
+  "author": "Stefan Veličković (@stefisha)",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

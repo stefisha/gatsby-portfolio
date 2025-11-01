@@ -94,8 +94,10 @@ Content is managed through MDX files in `src/@lekoarts/gatsby-theme-cara/section
 
 ## 📄 License
 
-This project is based on the Gatsby Starter Portfolio: Cara by [LekoArts](https://github.com/LekoArts/gatsby-starter-portfolio-cara), released under the 0BSD license.
+MIT License - Copyright (c) 2025 Stefan Veličković
+
+Built with Gatsby and React.
 
 ---
 
-Built with ❤️ by Stefan Veličković (@stefisha)
+**Stefan Veličković** • [@stefisha](https://github.com/stefisha)
