@@ -6,10 +6,10 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 const config: GatsbyConfig = {
   siteMetadata: {
     siteTitle: `Stefisha`,
-    siteTitleAlt: `@stefisha portfolio`,
-    siteHeadline: `@stefisha portfolio`,
+    siteTitleAlt: `Stefan Veličković | AI & Software Engineer`,
+    siteHeadline: `Software Engineer building scalable AI solutions, enterprise RAG systems, and Web3 developer ecosystems`,
     siteUrl: `https://stefisha.me`,
-    siteDescription: `Portfolio website for @stefisha - Software engineer specializing in AI, machine learning, DevOps and Blockchain`,
+    siteDescription: `Portfolio of Stefan Veličković, a Software Engineer building scalable AI solutions, enterprise RAG systems, and Web3 developer ecosystems.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
     author: `@stefisha`,
@@ -26,7 +26,7 @@ const config: GatsbyConfig = {
       options: {
         name: `@stefisha Portfolio`,
         short_name: `@stefisha`,
-        description: `Portfolio website for @stefisha`,
+        description: `Portfolio of Stefan Veličković, a Software Engineer building scalable AI solutions, enterprise RAG systems, and Web3 developer ecosystems.`,
         start_url: `/`,
         background_color: `#141821`,
         // This will impact how browsers show your PWA/website
