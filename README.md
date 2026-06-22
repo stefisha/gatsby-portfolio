@@ -88,7 +88,7 @@ Content is managed through MDX files in `src/@lekoarts/gatsby-theme-cara/section
 
 - **GitHub:** [@stefisha](https://github.com/stefisha)
 - **LinkedIn:** [stefan-velickovic](https://www.linkedin.com/in/stefan-velickovic/)
-- **X/Twitter:** [@stefisha](https://x.com/stefisha)
+- **X/Twitter:** [@stefisha_](https://x.com/stefisha_)
 - **Instagram:** [@svelichko_](https://www.instagram.com/svelichko_)
 - **Schedule a Call:** [calendly.com/stefan-velickovic/30min](https://calendly.com/stefan-velickovic/30min)
 
