@@ -6,13 +6,13 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 const config: GatsbyConfig = {
   siteMetadata: {
     siteTitle: `Stefisha`,
-    siteTitleAlt: `Stefan Veličković | AI & Software Engineer`,
-    siteHeadline: `Software Engineer building scalable AI solutions, enterprise RAG systems, and Web3 developer ecosystems`,
+    siteTitleAlt: `Stefan Veličković | Senior Software Engineer & AI Engineer`,
+    siteHeadline: `Senior Software Engineer focused on agentic AI, secure tool use, and reliable fintech systems`,
     siteUrl: `https://stefisha.me`,
-    siteDescription: `Portfolio of Stefan Veličković, a Software Engineer building scalable AI solutions, enterprise RAG systems, and Web3 developer ecosystems.`,
+    siteDescription: `Portfolio of Stefan Veličković, a Senior Software Engineer focused on agentic AI, secure tool use, RAG, and reliable fintech systems.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,
-    author: `@stefisha`,
+    author: `@stefisha_`,
   },
   trailingSlash: `always`,
   plugins: [
@@ -26,7 +26,7 @@ const config: GatsbyConfig = {
       options: {
         name: `@stefisha Portfolio`,
         short_name: `@stefisha`,
-        description: `Portfolio of Stefan Veličković, a Software Engineer building scalable AI solutions, enterprise RAG systems, and Web3 developer ecosystems.`,
+        description: `Portfolio of Stefan Veličković, a Senior Software Engineer focused on agentic AI, secure tool use, RAG, and reliable fintech systems.`,
         start_url: `/`,
         background_color: `#141821`,
         // This will impact how browsers show your PWA/website
