@@ -1,3 +1,5 @@
+![Stefan Veličković · Software Engineering and AI](docs/banner.png)
+
 # Stefan Veličković · Portfolio
 
 [![Deployment](https://github.com/stefisha/gatsby-portfolio/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/stefisha/gatsby-portfolio/actions/workflows/deploy-pages.yml)
