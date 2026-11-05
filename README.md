@@ -1,103 +1,67 @@
-# Stefan Veličković - Portfolio Website
+# Stefan Veličković · Portfolio
 
-Personal portfolio website showcasing my work in AI, machine learning, blockchain, and DevOps.
+[![Deployment](https://github.com/stefisha/gatsby-portfolio/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/stefisha/gatsby-portfolio/actions/workflows/deploy-pages.yml)
 
-**Live Site:** [stefisha.me](https://stefisha.me)
+Source code for [stefisha.me](https://stefisha.me), my personal portfolio. The site presents selected projects, engineering experience, technical interests and contact links.
 
-## 🚀 About
+Built with **Gatsby 5, React 18 and TypeScript**, using the [Cara theme by LekoArts](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-cara). Content is written in MDX, with local component overrides for the footer and 404 page. The original theme supplies the colourful project cards, parallax illustrations and light/dark modes.
 
-This is my professional portfolio built with Gatsby, featuring a modern, playful design with parallax effects and animations. The site showcases my projects in AI/ML, blockchain development, and web technologies.
+## Run locally
 
-## ✨ Features
+Use **Node.js 24**, matching `.nvmrc` and the deployment workflow:
 
-- Playful and colorful one-page design
-- Parallax scrolling effects
-- Responsive and mobile-friendly
-- Project showcase with live demos
-- Skills and technology highlights
-- Direct contact and scheduling integration
-
-## 🛠️ Tech Stack
-
-- **Framework:** Gatsby v5
-- **Theme:** @lekoarts/gatsby-theme-cara
-- **Language:** TypeScript
-- **Styling:** Theme UI
-- **Animations:** react-spring
-
-## 📂 Project Structure
-
-```
-gatsby-portfolio/
-├── src/
-│   └── @lekoarts/gatsby-theme-cara/
-│       └── sections/
-│           ├── intro.mdx      # Introduction/Hero section
-│           ├── projects.mdx   # Project showcase
-│           ├── about.mdx      # About me & skills
-│           └── contact.mdx    # Contact information
-├── static/                    # Static assets (favicons, images)
-├── gatsby-config.ts          # Gatsby configuration
-└── package.json
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-```bash
+```sh
 git clone https://github.com/stefisha/gatsby-portfolio.git
 cd gatsby-portfolio
-```
-
-2. Install dependencies
-```bash
-npm install
-```
-
-3. Start the development server
-```bash
+nvm use
+npm ci
 npm run develop
 ```
 
-The site will be running at `http://localhost:8000`
+Open [localhost:8000](http://localhost:8000). If you do not use nvm, install Node.js 24 before running the npm commands. The checked-in lockfile and `.npmrc` are used together; the theme's dependency tree currently requires `legacy-peer-deps=true`.
 
-### Available Scripts
+## Verify a production build
 
-- `npm run develop` - Start development server
-- `npm run build` - Build for production
-- `npm run serve` - Serve production build locally
-- `npm run clean` - Clean Gatsby cache
+```sh
+npm run typecheck
+npm run build
+npm run check:build
+npm run serve
+```
 
-## 📝 Customization
+The production preview runs at [localhost:9000](http://localhost:9000). `check:build` verifies the generated homepage, 404 document, metadata, custom domain, manifest and local browser resources. Use `npm run clean` if a Gatsby cache needs to be rebuilt.
 
-Content is managed through MDX files in `src/@lekoarts/gatsby-theme-cara/sections/`:
+The deployed site is static. Node.js is needed for development and builds, not for serving the finished website.
 
-- **intro.mdx** - Update your name and tagline
-- **projects.mdx** - Add/edit projects using `<ProjectCard>` components
-- **about.mdx** - Describe your background and skills
-- **contact.mdx** - Update contact links and social media
+## Edit the content
 
-## 🌐 Connect With Me
+Gatsby theme shadowing lets this repository customize Cara without copying or editing its dependencies.
 
-- **GitHub:** [@stefisha](https://github.com/stefisha)
-- **LinkedIn:** [stefan-velickovic](https://www.linkedin.com/in/stefan-velickovic/)
-- **X/Twitter:** [@stefisha_](https://x.com/stefisha_)
-- **Instagram:** [@svelichko_](https://www.instagram.com/svelichko_)
-- **Schedule a Call:** [calendly.com/stefan-velickovic/30min](https://calendly.com/stefan-velickovic/30min)
+| File | Content |
+| --- | --- |
+| `src/@lekoarts/gatsby-theme-cara/sections/intro.mdx` | Name and introduction |
+| `src/@lekoarts/gatsby-theme-cara/sections/projects.mdx` | Project descriptions and repository links |
+| `src/@lekoarts/gatsby-theme-cara/sections/about.mdx` | Background and technical experience |
+| `src/@lekoarts/gatsby-theme-cara/sections/contact.mdx` | Contact, scheduling and CV links |
+| `src/@lekoarts/gatsby-theme-cara/components/footer.tsx` | Footer and theme toggle |
+| `src/pages/404.tsx` | Page-not-found screen and metadata |
+| `gatsby-config.ts` | Site metadata, theme and manifest configuration |
+| `static/` | Favicons, social image, SVG symbols and custom domain |
 
-## 📄 License
+The `src/types/theme-ui.d.ts` declaration bridges the installed theme's older JSX types with React 18 and TypeScript 5.1 or later. It changes type checking only.
 
-MIT License - Copyright (c) 2025 Stefan Veličković
+## Deployment
 
-Built with Gatsby and React.
+GitHub Actions checks TypeScript, builds the site and validates the generated files. Pull requests run the checks without deploying. Successful builds from `main` publish `public/` to GitHub Pages.
 
----
+The existing domain is configured through `static/CNAME` and `siteMetadata.siteUrl`. Keep those values aligned if the domain changes. A manual deployment can also be started from the Actions tab.
 
-**Stefan Veličković** • [@stefisha](https://github.com/stefisha)
+## Dependency maintenance
+
+Install with `npm ci` and review dependency changes alongside a production build. Some upstream Gatsby and theme-tooling advisories remain; see [dependency notes](docs/dependencies.md) for the verified scope and current limitations.
+
+## Credits and license
+
+The portfolio is customized from **LekoArts' Gatsby Starter Cara**. The theme and its dependencies retain their own licenses.
+
+This repository uses the [BSD Zero Clause license (0BSD)](LICENSE), as stated in its existing license file.

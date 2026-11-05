@@ -1,7 +1,7 @@
 import type { GatsbyConfig, PluginRef } from "gatsby"
 import "dotenv/config"
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE === "true"
 
 const config: GatsbyConfig = {
   siteMetadata: {

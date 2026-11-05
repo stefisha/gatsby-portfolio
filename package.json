@@ -4,15 +4,15 @@
   "description": "Stefan Veličković's portfolio - Senior Software Engineer focused on agentic AI, secure tool use, and fintech",
   "version": "1.0.0",
   "author": "Stefan Veličković (@stefisha)",
-  "license": "MIT",
+  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit",
+    "check:build": "node scripts/check-build.cjs"
   },
   "dependencies": {
     "@lekoarts/gatsby-theme-cara": "^5.1.4",
@@ -20,7 +20,11 @@
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-webpack-statoscope": "^1.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "dotenv": "8.6.0",
+    "theme-ui": "0.15.7",
+    "@theme-ui/mdx": "0.15.7",
+    "@react-spring/parallax": "9.7.5"
   },
   "overrides": {
     "cookie": "^0.7.2",
@@ -41,7 +45,9 @@
     "@types/react-dom": "^18.2.18",
     "ajv": "^8.17.1",
     "ajv-keywords": "^5.1.0",
-    "cross-env": "^7.0.3",
     "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=24 <25"
   }
 }

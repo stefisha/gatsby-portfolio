@@ -12,7 +12,8 @@ const Footer = () => {
         onClick={() => {
           const next = isDark ? `light` : `dark`
           setColorMode(next)
-          document.documentElement.classList.value = `theme-ui-${next}`
+          document.documentElement.classList.remove(`theme-ui-light`, `theme-ui-dark`)
+          document.documentElement.classList.add(`theme-ui-${next}`)
         }}
         type="button"
         data-testid="color-mode-toggle"

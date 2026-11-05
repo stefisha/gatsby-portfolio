@@ -57,4 +57,8 @@ const NotFound = (_props: PageProps) => (
 
 export default NotFound
 
-export const Head: HeadFC = () => <Seo title="404 - Not Found" />
+export const Head: HeadFC = () => (
+  <Seo title="404 - Not Found" pathname="/404/">
+    <meta name="robots" content="noindex" />
+  </Seo>
+)
