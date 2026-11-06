@@ -78,3 +78,6 @@ portfolio-build.zip
 *.docx
 *.pdf
 *CV*
+
+# Published CV served by GitHub Pages
+!/static/cv.pdf

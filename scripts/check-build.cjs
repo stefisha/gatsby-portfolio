@@ -35,3 +35,11 @@ for (const image of ['banner.jpg', 'favicon-32x32.png', 'favicon-16x16.png', 'ap
   assert.ok(fs.existsSync(path.join(publicDir, image)), `Missing static image: ${image}`);
 }
 console.log(`Build checks passed: homepage, 404, metadata, domain, manifest and ${resources} local resources.`);
+
+const cv = fs.readFileSync(path.join(publicDir, 'cv.pdf'));
+assert.equal(cv.subarray(0, 5).toString(), '%PDF-', 'The public CV must be a PDF');
+const pageBundle = fs.readdirSync(publicDir).filter((name) => name.startsWith(JSON.parse(fs.readFileSync(path.join(publicDir, 'page-data/index/page-data.json'), 'utf8')).componentChunkName + '-') && name.endsWith('.js')).map((name) => fs.readFileSync(path.join(publicDir, name), 'utf8')).join('\n');
+assert.ok(pageBundle.includes('/cv.pdf'), 'The homepage must link directly to the hosted CV');
+assert.ok(pageBundle.includes('View projects'), 'Quick project navigation must be present');
+assert.ok(!pageBundle.includes('drive.google.com'), 'The CV must not require Google Drive');
+console.log('CV and quick navigation checks passed.');
