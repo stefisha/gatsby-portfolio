@@ -29,8 +29,6 @@ const Svg = ({ stroke = false, color = ``, width, icon, left, top, hiddenMobile 
   <svg
     sx={{
       position: `absolute`,
-      opacity: 0.3,
-      pointerEvents: `none`,
       stroke: stroke ? `currentColor` : `none`,
       fill: stroke ? `none` : `currentColor`,
       display: hiddenMobile ? hidden : `block`,
@@ -39,8 +37,6 @@ const Svg = ({ stroke = false, color = ``, width, icon, left, top, hiddenMobile 
       left,
       top,
     }}
-    aria-hidden="true"
-    focusable="false"
     viewBox={viewBox[icon]}
   >
     <use href={withPrefix(`/icons.svg#${icon}`)} />

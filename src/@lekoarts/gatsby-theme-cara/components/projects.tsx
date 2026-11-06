@@ -11,12 +11,12 @@ const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) =
   <div>
     <Divider
       bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
-      sx={{ clipPath: `polygon(0 0, 100% 0, 100% 95%, 0 85%)` }}
-      speed={0}
-      offset={offset}
+      sx={{ clipPath: `polygon(0 15%, 100% 25%, 100% 85%, 0 75%)` }}
+      speed={-0.2}
+      offset={1.1}
       factor={factor}
     />
-    <Content speed={0} offset={offset} factor={factor} sx={{ justifyContent: `flex-start`, pt: [4, 4, 4, 5] }}>
+    <Content speed={0} offset={offset + 0.65} factor={factor} sx={{ justifyContent: `flex-start`, pt: [4, 4, 4, 5] }}>
       <Inner>
         <div
           sx={{

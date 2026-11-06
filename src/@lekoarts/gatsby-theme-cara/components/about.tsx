@@ -8,6 +8,13 @@ import AboutMDX from "../sections/about.mdx"
 
 const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
+    <Divider
+      bg="divider"
+      clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
+      speed={0.2}
+      offset={offset}
+      factor={factor}
+    />
     <Divider speed={0.1} offset={offset} factor={factor}>
       <UpDown>
         <Svg icon="box" hiddenMobile width={6} color="icon_blue" left="50%" top="75%" />
