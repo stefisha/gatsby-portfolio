@@ -43,7 +43,6 @@ const Hero = ({ offset, factor = 1, onViewProjects }: { offset: number; factor?:
         <nav aria-label="Quick links" sx={{ display: `flex`, flexWrap: `wrap`, gap: 3, mt: 4, fontSize: [2, 2, 3], alignItems: `center` }}>
           <button type="button" onClick={onViewProjects} sx={{ font: `inherit`, fontWeight: `bold`, color: `primary`, background: `transparent`, border: `1px solid`, borderColor: `primary`, borderRadius: 8, px: 3, py: 2, cursor: `pointer`, '&:hover': { textDecoration: `underline` }, '&:focus-visible': { outline: `2px solid`, outlineOffset: 4 } }}>View projects</button>
           <a href="/cv.pdf" sx={{ fontWeight: `bold`, py: 2 }}>Download CV</a>
-          <a href="mailto:stefanhrmail@gmail.com" sx={{ fontWeight: `bold`, py: 2 }}>Email</a>
         </nav>
       </Inner>
     </Content>

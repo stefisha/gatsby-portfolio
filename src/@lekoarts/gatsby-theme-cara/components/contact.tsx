@@ -10,13 +10,13 @@ import ContactMDX from "../sections/contact.mdx"
 
 const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
-    <Divider fill="divider" speed={0.2} offset={offset} factor={factor}>
+    <Divider fill="divider" speed={0} offset={offset} factor={factor}>
       <div sx={{ position: `absolute`, bottom: 0, width: `full`, transform: `matrix(1, 0, 0, -1, 0, 0)` }}>
         <div
           sx={{
             position: `relative`,
             height: `full`,
-            svg: { width: `100%`, height: `40vh` },
+            svg: { width: `100%`, height: `40vh`, display: `block` },
             path: { animation: waveAnimation(`20s`) },
           }}
         >
@@ -33,8 +33,13 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
         </div>
       </div>
     </Divider>
-    <Content speed={0.4} offset={offset} factor={factor}>
-      <Inner>
+    <Content speed={0} offset={offset} factor={factor}>
+      <Inner sx={{
+        '.contact-actions': { display: `flex`, flexWrap: `wrap`, gap: 3, alignItems: `center`, my: 4 },
+        '.contact-email': { display: `inline-flex`, gap: 2, alignItems: `center`, px: 3, py: 2, borderRadius: 8, backgroundColor: `primary`, color: `background`, fontWeight: `bold`, boxShadow: `0 4px 12px rgba(0,0,0,0.12)`, textDecoration: `none`, '&:hover': { color: `background`, textDecoration: `underline` } },
+        '.contact-call': { fontWeight: `bold`, py: 2 },
+        'a:focus-visible': { outline: `2px solid`, outlineColor: `primary`, outlineOffset: 4 },
+      }}>
         <ContactMDX />
       </Inner>
       <Footer />

@@ -33,13 +33,13 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
   >
     <div
       sx={{
-        opacity: 1,
+        opacity: 0.85,
         textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
         p: {
           fontSize: [1, 2],
           color: `white`,
           margin: 0,
-          lineHeight: 1.45,
+          lineHeight: 1.25,
         },
       }}
     >
