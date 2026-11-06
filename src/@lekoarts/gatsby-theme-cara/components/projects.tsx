@@ -16,14 +16,16 @@ const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) =
       offset={offset}
       factor={factor}
     />
-    <Content speed={0.4} offset={offset + 0.2} factor={factor}>
+    <Content speed={0} offset={offset} factor={factor} sx={{ justifyContent: `flex-start`, pt: [4, 4, 4, 5] }}>
       <Inner>
         <div
           sx={{
             display: `grid`,
-            gridGap: [4, 4, 4, 5],
+            columnGap: [4, 4, 4, 5],
+            rowGap: [3, 4],
+            alignItems: `stretch`,
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
-            h2: { gridColumn: `-1/1`, color: `white !important` },
+            h2: { gridColumn: `-1/1`, color: `white !important`, mt: 0, mb: 2 },
           }}
         >
           <ProjectsMDX />

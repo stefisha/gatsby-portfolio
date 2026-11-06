@@ -13,7 +13,7 @@ const Cara = () => {
   return (
     <Layout>
       <Parallax ref={parallax} pages={4.8}>
-        <Hero offset={0} factor={1} onViewProjects={() => parallax.current?.scrollTo(window.innerWidth < 768 ? 1.1 : 1.25)} />
+        <Hero offset={0} factor={1} onViewProjects={() => parallax.current?.scrollTo(1)} />
         <Projects offset={1} factor={1.8} />
         <About offset={2.8} factor={1} />
         <Contact offset={3.8} factor={1} />

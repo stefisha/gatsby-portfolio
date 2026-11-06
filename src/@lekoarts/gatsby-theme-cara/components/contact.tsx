@@ -5,6 +5,7 @@ import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner"
 import Content from "@lekoarts/gatsby-theme-cara/src/elements/content"
 import Svg from "./svg"
 import { UpDown, UpDownWide, waveAnimation } from "@lekoarts/gatsby-theme-cara/src/styles/animations"
+import { primaryAction, secondaryAction } from "./action-styles"
 import Footer from "./footer"
 import ContactMDX from "../sections/contact.mdx"
 
@@ -36,8 +37,8 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
     <Content speed={0} offset={offset} factor={factor}>
       <Inner sx={{
         '.contact-actions': { display: `flex`, flexWrap: `wrap`, gap: 3, alignItems: `center`, my: 4 },
-        '.contact-email': { display: `inline-flex`, gap: 2, alignItems: `center`, px: 3, py: 2, borderRadius: 8, backgroundColor: `primary`, color: `background`, fontWeight: `bold`, boxShadow: `0 4px 12px rgba(0,0,0,0.12)`, textDecoration: `none`, '&:hover': { color: `background`, textDecoration: `underline` } },
-        '.contact-call': { fontWeight: `bold`, py: 2 },
+        '.contact-email': primaryAction,
+        '.contact-call': secondaryAction,
         'a:focus-visible': { outline: `2px solid`, outlineColor: `primary`, outlineOffset: 4 },
       }}>
         <ContactMDX />
